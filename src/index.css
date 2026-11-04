@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+    --paper-ivory: #f5f3ee;
+    --paper-graphite: #202124;
+    --paper-navy: #172554;
+    --paper-gold: #c6a76b;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: #f5f3ee;
+    color: #202124;
+    font-family: "DM Sans", Inter, system-ui, -apple-system, sans-serif;
+    font-feature-settings: "kern" 1;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: "Instrument Serif", Georgia, serif;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  ::selection {
+    background: #172554;
+    color: #f5f3ee;
+  }
+
+  /* Elegant, restrained scrollbars */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: #d4cfc3 transparent;
+  }
+  *::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: #d4cfc3;
+    border-radius: 999px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  input, select, textarea, button {
+    font-family: inherit;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply font-mono text-[11px] uppercase tracking-[0.24em] font-medium;
+  }
+
+  .card {
+    @apply bg-white border border-ivory-300 rounded-2xl shadow-lift;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-navy text-ivory-100 font-grotesk font-medium text-sm px-6 py-3.5 rounded-xl transition-all duration-300 hover:bg-navy-700 hover:shadow-lift2 active:scale-[0.985] disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 bg-white border border-ivory-300 text-graphite font-grotesk font-medium text-sm px-6 py-3.5 rounded-xl transition-all duration-300 hover:border-graphite-400 hover:shadow-lift active:scale-[0.985] disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .field {
+    @apply w-full bg-ivory-50 border border-ivory-300 rounded-lg px-3.5 py-2.5 text-sm text-graphite placeholder:text-graphite-400 focus:outline-none focus:border-navy focus:ring-1 focus:ring-navy/30 transition-colors;
+  }
+
+  .label {
+    @apply block text-[11px] font-mono uppercase tracking-[0.16em] text-graphite-500 mb-1.5;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-grotesk font-medium tracking-wide;
+  }
+
+  .rule {
+    @apply border-t border-ivory-300;
+  }
+}
+
+/* Text mask reveal helper for cinematic headings */
+.reveal-mask {
+  display: block;
+  overflow: hidden;
+}
+
+/* Print / report export */
+@media print {
+  .no-print { display: none !important; }
+  body { background: #fff; }
+  .card { box-shadow: none !important; break-inside: avoid; }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
