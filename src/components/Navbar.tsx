@@ -118,7 +118,7 @@ export const Navbar: React.FC = () => {
         <nav aria-label="Primary" className="hidden xl:flex items-center gap-1">
           <Link
             to="/dashboard"
-            className={`rounded-lg px-3 py-2 text-[13px] font-grotesk font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-navy/40 ${
+            className={`rounded-lg px-3 py-2 text-[13.5px] font-grotesk font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-navy/40 ${
               isActive('/dashboard') ? 'bg-navy text-ivory-100' : 'text-graphite-700 hover:bg-ivory-200 hover:text-graphite'
             }`}
           >
@@ -134,7 +134,7 @@ export const Navbar: React.FC = () => {
                   aria-haspopup="true"
                   onClick={() => setOpenGroup(open ? null : g.label)}
                   onMouseEnter={() => setOpenGroup(g.label)}
-                  className={`flex items-center gap-1 rounded-lg px-3 py-2 text-[13px] font-grotesk font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-navy/40 ${
+                  className={`flex items-center gap-1 rounded-lg px-3 py-2 text-[13.5px] font-grotesk font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-navy/40 ${
                     active && !open ? 'text-navy' : open ? 'bg-white text-graphite shadow-lift' : 'text-graphite-700 hover:bg-ivory-200 hover:text-graphite'
                   }`}
                 >
@@ -160,8 +160,8 @@ export const Navbar: React.FC = () => {
                           >
                             <item.icon className={`mt-0.5 h-4 w-4 shrink-0 ${isActive(item.to) ? 'text-navy' : 'text-academic'}`} />
                             <span className="min-w-0">
-                              <span className="block text-[13px] font-grotesk font-medium text-graphite">{item.label}</span>
-                              {item.desc && <span className="mt-0.5 block text-[11px] leading-snug text-graphite-500">{item.desc}</span>}
+                              <span className="block text-[13.5px] font-grotesk font-medium text-graphite">{item.label}</span>
+                              {item.desc && <span className="mt-0.5 block text-[12px] leading-snug text-graphite-600">{item.desc}</span>}
                             </span>
                           </Link>
                         </li>
@@ -177,13 +177,13 @@ export const Navbar: React.FC = () => {
         {/* Right side */}
         <div className="flex items-center gap-2.5">
           <span
-            className="hidden lg:inline-flex items-center gap-1.5 rounded-full border border-ivory-300 bg-white px-3 py-1.5 font-mono text-[9.5px] uppercase tracking-[0.14em] text-graphite-500"
+            className="hidden lg:inline-flex items-center gap-1.5 rounded-full border border-ivory-300 bg-white px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.13em] text-graphite-600"
             title={`${papers.length} papers · ${questions.length} questions in the current dataset`}
           >
             <span className={`h-1.5 w-1.5 rounded-full ${demoEnabled ? 'bg-gold' : 'bg-emerald-500'}`} />
             {papers.length} papers · {questions.length} questions
           </span>
-          <Link to="/dashboard" className="btn-primary !px-4 !py-2.5 !text-[13px]">
+          <Link to="/dashboard" className="btn-primary !px-4 !py-2.5 !text-[13.5px]">
             Open dashboard
             <ArrowRight className="h-3.5 w-3.5" />
           </Link>

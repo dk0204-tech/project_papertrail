@@ -52,11 +52,11 @@ const Select: React.FC<{
   active?: boolean
 }> = ({ label, value, onChange, options, active }) => (
   <label className="flex min-w-0 flex-col gap-1">
-    <span className="font-mono text-[9px] uppercase tracking-[0.18em] text-graphite-500">{label}</span>
+    <span className="font-mono text-[10.5px] uppercase tracking-[0.16em] text-graphite-600">{label}</span>
     <select
       value={String(value)}
       onChange={(e) => onChange(e.target.value)}
-      className={`field cursor-pointer truncate py-2 text-xs ${active ? 'border-navy/40 bg-white font-medium text-navy' : ''}`}
+      className={`field cursor-pointer truncate py-2 text-[13px] ${active ? 'border-navy/40 bg-white font-medium text-navy' : ''}`}
     >
       {options.map((o) => (
         <option key={o.value} value={o.value}>
@@ -77,16 +77,16 @@ export const FilterBar: React.FC<{ className?: string; compact?: boolean }> = ({
   return (
     <div className={`card no-print p-4 ${className}`}>
       <div className="mb-3 flex items-center justify-between gap-3">
-        <div className="flex items-center gap-2 text-graphite-600">
+        <div className="flex items-center gap-2 text-graphite-700">
           <SlidersHorizontal className="h-3.5 w-3.5" />
-          <span className="font-mono text-[10px] uppercase tracking-[0.18em]">
+          <span className="font-mono text-[11px] uppercase tracking-[0.16em]">
             Global filters{activeCount > 0 ? ` · ${activeCount} active` : ''}
           </span>
         </div>
         {activeCount > 0 && (
           <button
             onClick={resetFilters}
-            className="inline-flex items-center gap-1 rounded-full border border-ivory-300 bg-ivory-50 px-2.5 py-1 text-[10px] font-grotesk font-medium text-graphite-600 hover:border-graphite-400 hover:text-graphite focus:outline-none focus-visible:ring-2 focus-visible:ring-navy/40"
+            className="inline-flex items-center gap-1 rounded-full border border-ivory-300 bg-ivory-50 px-2.5 py-1 text-[11px] font-grotesk font-medium text-graphite-700 hover:border-graphite-400 hover:text-graphite focus:outline-none focus-visible:ring-2 focus-visible:ring-navy/40"
           >
             <X className="h-3 w-3" /> Clear all
           </button>

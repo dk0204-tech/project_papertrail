@@ -18,7 +18,7 @@ export const PageHeader: React.FC<{
         {eyebrow && <p className="eyebrow text-academic mb-3">{eyebrow}</p>}
         <h1 className="text-4xl md:text-5xl leading-[1.06] text-graphite">{title}</h1>
         {description && (
-          <p className="mt-4 text-graphite-600 text-base md:text-lg leading-relaxed max-w-prose2">
+          <p className="mt-4 text-graphite-600 text-[15px] md:text-lg leading-relaxed max-w-prose2">
             {description}
           </p>
         )}
@@ -31,7 +31,7 @@ export const PageHeader: React.FC<{
 
 export const DemoBadge: React.FC<{ className?: string }> = ({ className = '' }) => (
   <span
-    className={`inline-flex items-center gap-2 rounded-full border border-gold/50 bg-gold-100 px-3 py-1.5 font-mono text-[10px] uppercase tracking-[0.16em] text-gold-600 ${className}`}
+    className={`inline-flex items-center gap-2 rounded-full border border-gold/50 bg-gold-100 px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.14em] text-gold-600 ${className}`}
     title="Demo statistics are fictional and do not represent real MIT Manipal examination records."
   >
     <span className="h-1.5 w-1.5 rounded-full bg-gold" />
@@ -66,14 +66,14 @@ export const Stat: React.FC<{
   return (
     <div className="card p-5 md:p-6 group hover:shadow-lift2 transition-shadow duration-300">
       <div className="flex items-start justify-between gap-3">
-        <p className="eyebrow text-graphite-500">{label}</p>
+        <p className="eyebrow text-graphite-600">{label}</p>
         {Icon && (
           <Icon className={`h-4 w-4 ${accentMap[accent]} opacity-70 group-hover:opacity-100 transition-opacity`} />
         )}
       </div>
       <p className={`mt-3 text-3xl md:text-4xl font-display leading-none ${accentMap[accent]}`}>{value}</p>
-      {sub && <p className="mt-2 text-xs text-graphite-500 leading-snug">{sub}</p>}
-      {hint && <p className="mt-1 font-mono text-[10px] text-graphite-400">{hint}</p>}
+      {sub && <p className="mt-2 text-[12.5px] text-graphite-600 leading-snug">{sub}</p>}
+      {hint && <p className="mt-1 font-mono text-[11px] text-graphite-500">{hint}</p>}
     </div>
   )
 }
@@ -137,7 +137,7 @@ export const EmptyState: React.FC<{
       <Icon className="h-6 w-6" />
     </div>
     <h3 className="text-2xl text-graphite">{title}</h3>
-    <p className="mt-2 max-w-md text-sm leading-relaxed text-graphite-600">{description}</p>
+    <p className="mt-2 max-w-md text-[13.5px] leading-relaxed text-graphite-600">{description}</p>
     {(action || secondaryAction) && (
       <div className="mt-6 flex flex-wrap items-center justify-center gap-3">
         {action && (
@@ -158,7 +158,7 @@ export const LoadingBlock: React.FC<{ label?: string }> = ({ label = 'Working…
       <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-academic-400 opacity-60" />
       <span className="relative inline-flex h-5 w-5 rounded-full bg-academic" />
     </span>
-    <span className="font-mono text-xs uppercase tracking-[0.18em] text-graphite-600">{label}</span>
+    <span className="font-mono text-[12px] uppercase tracking-[0.16em] text-graphite-600">{label}</span>
   </div>
 )
 
@@ -172,9 +172,9 @@ export const SectionTitle: React.FC<{
 }> = ({ kicker, title, description, right }) => (
   <div className="mb-6 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
     <div className="max-w-2xl">
-      {kicker && <p className="eyebrow text-graphite-500 mb-2">{kicker}</p>}
+      {kicker && <p className="eyebrow text-graphite-600 mb-2">{kicker}</p>}
       <h2 className="text-2xl md:text-3xl text-graphite leading-tight">{title}</h2>
-      {description && <p className="mt-2 text-sm text-graphite-600 leading-relaxed">{description}</p>}
+      {description && <p className="mt-2 text-[13.5px] text-graphite-600 leading-relaxed">{description}</p>}
     </div>
     {right && <div className="flex items-center gap-2 shrink-0">{right}</div>}
   </div>
@@ -218,7 +218,7 @@ export const ChartCard: React.FC<{
     <div className="mb-5 flex flex-wrap items-start justify-between gap-3">
       <div>
         <h3 className="text-xl text-graphite">{title}</h3>
-        {description && <p className="mt-1 text-xs text-graphite-500 max-w-prose2">{description}</p>}
+        {description && <p className="mt-1 text-[12.5px] text-graphite-600 max-w-prose2">{description}</p>}
       </div>
       {right}
     </div>
@@ -230,18 +230,18 @@ export const ChartCard: React.FC<{
 
 export const TableWrap: React.FC<{ children: React.ReactNode; className?: string }> = ({ children, className = '' }) => (
   <div className={`overflow-x-auto -mx-1 px-1 ${className}`}>
-    <table className="w-full min-w-[560px] border-collapse text-sm">{children}</table>
+    <table className="w-full min-w-[560px] border-collapse text-[13.5px]">{children}</table>
   </div>
 )
 
 export const Th: React.FC<{ children: React.ReactNode; className?: string }> = ({ children, className = '' }) => (
-  <th className={`border-b border-ivory-300 pb-2.5 text-left font-mono text-[10px] font-medium uppercase tracking-[0.14em] text-graphite-500 ${className}`}>
+  <th className={`border-b border-ivory-300 pb-2.5 text-left font-mono text-[11px] font-medium uppercase tracking-[0.13em] text-graphite-600 ${className}`}>
     {children}
   </th>
 )
 
 export const Td: React.FC<{ children: React.ReactNode; className?: string }> = ({ children, className = '' }) => (
-  <td className={`border-b border-ivory-200 py-3 pr-4 align-top text-graphite-700 ${className}`}>{children}</td>
+  <td className={`border-b border-ivory-200 py-3 pr-4 align-top text-[13.5px] text-graphite-700 ${className}`}>{children}</td>
 )
 
 // ── Modal ────────────────────────────────────────────────────────────────────
@@ -296,11 +296,11 @@ export const Modal: React.FC<{
 // ── Small utilities ──────────────────────────────────────────────────────────
 
 export const Prose: React.FC<{ children: React.ReactNode; className?: string }> = ({ children, className = '' }) => (
-  <div className={`max-w-prose2 text-sm leading-relaxed text-graphite-600 ${className}`}>{children}</div>
+  <div className={`max-w-prose2 text-[13.5px] leading-relaxed text-graphite-600 ${className}`}>{children}</div>
 )
 
 export const Mono: React.FC<{ children: React.ReactNode; className?: string }> = ({ children, className = '' }) => (
-  <span className={`font-mono text-[11px] tracking-wide ${className}`}>{children}</span>
+  <span className={`font-mono text-[12px] tracking-wide ${className}`}>{children}</span>
 )
 
 export function pct(n: number): string {

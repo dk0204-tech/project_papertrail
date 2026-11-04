@@ -61,7 +61,7 @@
 
 @layer components {
   .eyebrow {
-    @apply font-mono text-[11px] uppercase tracking-[0.24em] font-medium;
+    @apply font-mono text-[11.5px] uppercase tracking-[0.22em] font-medium;
   }
 
   .card {
@@ -69,23 +69,23 @@
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 bg-navy text-ivory-100 font-grotesk font-medium text-sm px-6 py-3.5 rounded-xl transition-all duration-300 hover:bg-navy-700 hover:shadow-lift2 active:scale-[0.985] disabled:opacity-50 disabled:pointer-events-none;
+    @apply inline-flex items-center justify-center gap-2 bg-navy text-ivory-100 font-grotesk font-medium text-[13.5px] px-6 py-3.5 rounded-xl transition-all duration-300 hover:bg-navy-700 hover:shadow-lift2 active:scale-[0.985] disabled:opacity-50 disabled:pointer-events-none;
   }
 
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-2 bg-white border border-ivory-300 text-graphite font-grotesk font-medium text-sm px-6 py-3.5 rounded-xl transition-all duration-300 hover:border-graphite-400 hover:shadow-lift active:scale-[0.985] disabled:opacity-50 disabled:pointer-events-none;
+    @apply inline-flex items-center justify-center gap-2 bg-white border border-ivory-300 text-graphite font-grotesk font-medium text-[13.5px] px-6 py-3.5 rounded-xl transition-all duration-300 hover:border-graphite-400 hover:shadow-lift active:scale-[0.985] disabled:opacity-50 disabled:pointer-events-none;
   }
 
   .field {
-    @apply w-full bg-ivory-50 border border-ivory-300 rounded-lg px-3.5 py-2.5 text-sm text-graphite placeholder:text-graphite-400 focus:outline-none focus:border-navy focus:ring-1 focus:ring-navy/30 transition-colors;
+    @apply w-full bg-ivory-50 border border-ivory-300 rounded-lg px-3.5 py-2.5 text-[13.5px] text-graphite placeholder:text-graphite-500 focus:outline-none focus:border-navy focus:ring-1 focus:ring-navy/30 transition-colors;
   }
 
   .label {
-    @apply block text-[11px] font-mono uppercase tracking-[0.16em] text-graphite-500 mb-1.5;
+    @apply block text-[11.5px] font-mono uppercase tracking-[0.15em] text-graphite-600 mb-1.5;
   }
 
   .chip {
-    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-grotesk font-medium tracking-wide;
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11.5px] font-grotesk font-medium tracking-wide;
   }
 
   .rule {
